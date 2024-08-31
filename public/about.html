@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link id="theme-link" rel="stylesheet" href="day.css">
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="settings.html">Settings</a>
+          <!-- <a href="index.html">Login</a> -->
+          <!-- <a id="username-display">Hello {Username}!</a> -->
+          <!-- <a id="current-date-time"></a>
+          <button id="theme-toggle" >Switch to Night Mode</button>
+          <button id="logout">Logout</Button> -->
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p><strong>Overview</strong></p>
+      <p>This Note-Taking App is a simple yet powerful tool for managing your daily notes and tasks. It allows users to add, edit, delete, and mark notes as complete. Additionally, the app features both day and night modes for enhanced user experience.</p>
+
+      <p><strong>Features</strong></p>
+      <p>Add, Edit, and Delete Notes: Easily manage your notes with intuitive controls.</p>
+      <p>Responsive Design: Uses a grid layout for a responsive user interface.</p>
+      <p>Dark Mode: Switch between day and night modes for comfortable viewing.</p>
+      <p>User Authentication: Secure login and registration with password hashing and session management.</p>
+      <p>Real-Time Updates: The app fetches and displays notes dynamically.</p>
+      <p>Error Handling: Comprehensive error handling to ensure a smooth user experience.</p>
+
+      <p><strong>Prerequisites</strong></p>
+      <p>Node.js (version 14 or higher)</p>
+      <p>MongoDB (running locally or a remote instance)</p>
+      <p>npm (Node Package Manager)</p>
+
+      <p><strong>Setup Instructions</strong></p>
+      <p>Clone the Repository</p>
+      <p>git clone &lt;your-repository-url&gt;</p>
+      <p>cd &lt;repository-directory&gt;</p>
+
+      <p><strong>Install Dependencies:</strong></p>
+      <p>npm install</p>
+      <p>npm install cors dotenv express express-session mongoose passport passport-local</p>
+      <p>npm install nodemon --save-dev</p>
+      <p>Add the following scripts to the scripts section to use nodemon for development:</p>
+      <p>
+      <pre>
+      "scripts": { 
+        "start": "nodemon index.js", 
+        "test": "echo \"Error: no test specified\" && exit 1" 
+      }
+      </pre>
+      </p>
+
+      <p><strong>Set Up Environment Variables:</strong></p>
+      <p>Create a .env file in the root directory.</p>
+      <p>Define your environment variables like so:</p>
+      <p>
+      <pre>
+      PORT=4000
+      MONGO_URI=mongodb://localhost:27017/note
+      SESSION_SECRET=your_secret_key
+      </pre>
+      </p>
+      <p>Start MongoDB: Ensure your MongoDB instance is running locally or accessible remotely.</p>
+
+      <p><strong>Run the Application:</strong></p>
+      <p>npm start</p>
+      <p>Access the App: Open your browser and navigate to <a href="http://localhost:4000/app">http://localhost:4000/app</a>.</p>
+
+      <p><strong>Usage</strong></p>
+      <p>Register/Login: Use the registration form to create an account or login if you already have an account.</p>
+      <p>Add Notes: Fill in the title and details, then click "Add".</p>
+      <p>Edit/Delete Notes: Click the "Edit" or "Delete" buttons on each note.</p>
+      <p>Toggle Dark Mode: Click the "Switch to Night Mode" button to change themes.</p>
+      <p><strong>Technologies Used</strong></p>
+      <p>Frontend: HTML, CSS, JavaScript</p>
+      <p>Backend: Node.js, Express.js</p>
+      <p>Database: MongoDB</p>
+      <p>Authentication: Passport.js with Local Strategy</p>
+      <p>Session Management: express-session</p>
+
+      <p><strong>Contributing</strong></p>
+      <p>Feel free to fork the repository and submit pull requests. For significant changes, please open an issue first to discuss what you would like to change.</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
