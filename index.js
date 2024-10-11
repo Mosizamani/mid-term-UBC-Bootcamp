@@ -8,6 +8,8 @@ require('dotenv').config();
 
 const app = express()
 const port = process.env.PORT || 4000
+const sessionSecret = process.env.SESSION_SECRET;
+const mongodbUrl = process.env.MONGODB_URL
 
 //... Middleware to check if the user is logged in
 const loggedIn = (req, res, next) => {
@@ -30,7 +32,7 @@ app.use(express.json())
 
 //... Configure session management
 app.use(session({
-    secret: 'infbflkumjnyhbtgrvfedhjbjgk',  //... Secret key for signing the session ID cookie
+    secret: sessionSecret,  //... Secret key for signing the session ID cookie
     resave: false,  //... Do not save session if unmodified
     saveUninitialized: false,  //... Do not create session until something is stored
     cookie: { 
@@ -61,7 +63,7 @@ app.use((err, req, res, next) => {
 const start = async () => {
     try {
         //... Connect to the MongoDB database
-        await mongoose.connect('mongodb://localhost:27017/note')
+        await mongoose.connect(mongodbUrl)
 
         //... Start the Express server on the specified port
         app.listen(port, () => {
