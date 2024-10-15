@@ -7,7 +7,7 @@ const passport = require('passport')
 require('dotenv').config();
 
 const app = express()
-const port = process.env.PORT || 4000
+const port = process.env.PORT
 const sessionSecret = process.env.SESSION_SECRET;
 const mongodbUrl = process.env.MONGODB_URL
 
@@ -24,7 +24,7 @@ const loggedIn = (req, res, next) => {
 
 const authRouter = require('./routers/authRouter')
 const noteRouter = require('./routers/noteRouter')
-
+mongodb://localhost:27017/note
 //... Enable Cross-Origin Resource Sharing (CORS) to allow requests from different origins
 app.use(cors())
 //... Middleware to parse JSON requests
