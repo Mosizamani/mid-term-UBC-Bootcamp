@@ -1,5 +1,6 @@
 // Base URL of the REST API for managing note items
-const API_URL = 'http://localhost:4000'
+// const API_URL = 'http://localhost:4000'
+const API_URL = 'https://mid-term-ubc-bootcamp.onrender.com'
 
 // Element to display error messages to the user
 const errorElement = document.getElementById('error')
