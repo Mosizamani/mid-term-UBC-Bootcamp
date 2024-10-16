@@ -1,5 +1,5 @@
 // Define the base URL for the API endpoints
-const API_URL = 'http://localhost:4000'
+const API_URL = 'https://mid-term-ubc-bootcamp.onrender.com'
 
 // Add an event listener for the form submission of the registration form
 document.getElementById('register-form').addEventListener('submit', async (event) => {
