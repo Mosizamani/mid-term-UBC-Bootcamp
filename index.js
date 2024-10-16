@@ -11,6 +11,7 @@ const port = process.env.PORT
 const sessionSecret = process.env.SESSION_SECRET;
 const mongodbUrl = process.env.MONGODB_URL
 
+
 //... Middleware to check if the user is logged in
 const loggedIn = (req, res, next) => {
     if (req.user) {
